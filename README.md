@@ -18,5 +18,6 @@ esta solo muestra lso productos y permite el uso del buscar de los filtros de bu
    y algunas otras funciones para el buscador o renderizar la data.
    
 
+### Deploy
 Para poder ver la pagina visitar el siguiente enlace: 
 https://bsale-front-eight.vercel.app/
