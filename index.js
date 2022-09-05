@@ -12,7 +12,7 @@ const sidebar = document.querySelector(".sidebar");
 fetchCategories()
 fetchProducts()
 
-
+//asignar los valores del slider a los inputs
 var minSlider = document.getElementById('min');
 var maxSlider = document.getElementById('max');
 
@@ -31,6 +31,7 @@ maxSlider.oninput = function(){
 }
 
 
+//mostrar el sidebar cuando el ancho sea mayor a 800px
 if(window.matchMedia("(min-width: 800px)").matches){
 
     sidebar.style.width = "280px"

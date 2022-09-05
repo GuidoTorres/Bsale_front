@@ -26,6 +26,110 @@
     />
   </head>
   <body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+          <i class="fa-solid fa-xmark closeSideBarButton"></i>
+          <h1 class="title">Bsale Test</h1>
+    
+          <!-- <div>POKEMON</div> -->
+    
+          <!-- multi slider -->
+          <div class="multi-slider">
+            <div class="priceSlider">
+              <div class="min-max">
+                <div class="min">
+                  <span id="min-value"></span>
+                </div>
+    
+                <div class="max">
+                  <span id="max-value"></span>
+                </div>
+              </div>
+    
+              <div class="min-max-range">
+                <input
+                  type="range"
+                  min="0"
+                  max="5000"
+                  value="0"
+                  class="range"
+                  id="min"
+                />
+                <input
+                  type="range"
+                  min="5001"
+                  max="10000"
+                  value="10000"
+                  class="range"
+                  id="max"
+                />
+              </div>
+    
+              <div style="clear: both"></div>
+            </div>
+          </div>
+          <!-- multi slider -->
+    
+          <!-- accordion -->
+          <br>
+          <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                  shadow-none
+                >
+                  Ordenar por
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <div class="orderBy">
+                    <button class="asc" value="price_asc">Precio (Menor a mayor)</button>
+                    <button class="desc" value="price_desc">Precio (Mayor a menor)</button>
+                    <button class="disc" value="disc_desc">Descuento (Mayor a menor)</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Categorias
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body ">
+                  <div class="categories"></div>
+              </div>
+            </div>
+          </div>
+    </aside>
+    <!-- Sidebar -->
+
     <!-- Main -->
     <div class="main">
       <div class="mobile-header">
@@ -39,6 +143,9 @@
           class="input-search"
           placeholder=" Buscar productos"
         />
+      </div>
+      <div class="product-category">
+        
       </div>
       <section class="products">
 
@@ -65,109 +172,10 @@
     </div>
     <!-- Main -->
 
-    <!-- Sidebar -->
 
-    <aside class="sidebar">
-      <i class="fa-solid fa-xmark closeSideBarButton"></i>
-      <h1 class="title">Bsale Test</h1>
 
-      <!-- multi slider -->
-      <div class="multi-slider">
-        <div class="priceSlider">
-          <div class="min-max">
-            <div class="min">
-              <span id="min-value"></span>
-            </div>
-
-            <div class="max">
-              <span id="max-value"></span>
-            </div>
-          </div>
-
-          <div class="min-max-range">
-            <input
-              type="range"
-              min="0"
-              max="5000"
-              value="0"
-              class="range"
-              id="min"
-            />
-            <input
-              type="range"
-              min="5001"
-              max="10000"
-              value="10000"
-              class="range"
-              id="max"
-            />
-          </div>
-
-          <div style="clear: both"></div>
-        </div>
-      </div>
-
-      <!-- accordion -->
-
-      <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseOne"
-              aria-expanded="false"
-              aria-controls="flush-collapseOne"
-              shadow-none
-            >
-              Ordenar por
-            </button>
-          </h2>
-          <div
-            id="flush-collapseOne"
-            class="accordion-collapse collapse"
-            aria-labelledby="flush-headingOne"
-            data-bs-parent="#accordionFlushExample"
-          >
-            <div class="accordion-body">
-              <div class="orderBy">
-                <button class="asc" value="price_asc">Precio (Menor a mayor)</button>
-                <button class="desc" value="price_desc">Precio (Mayor a menor)</button>
-                <button class="disc" value="disc_desc">Descuento (Mayor a menor)</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingTwo">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseTwo"
-              aria-expanded="false"
-              aria-controls="flush-collapseTwo"
-            >
-              Categorias
-            </button>
-          </h2>
-          <div
-            id="flush-collapseTwo"
-            class="accordion-collapse collapse"
-            aria-labelledby="flush-headingTwo"
-            data-bs-parent="#accordionFlushExample"
-          >
-            <div class="accordion-body ">
-              <div class="categories"></div>
-          </div>
-        </div>
-      </div>
-    </aside>
-     <!-- accordion -->
    
      
-     <!-- <script src="./js/searchByCategory.js"></script> -->
     </body>
     <script type="module" src="./index.js"></script>
   <script

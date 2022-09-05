@@ -4,38 +4,77 @@
   padding-top: 60px;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   transition: 0.5s;
   width: 0;
   background: #fff;
   overflow-x: hidden;
 }
-.title{
-
+.title {
   display: none;
-
 }
 
-.orderBy{
-
+.orderBy {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  list-style: none;
 }
 
-.orderBy button{
-
+.orderBy button {
   background-color: white;
   border: none;
   text-align: left;
+  width: 100%;
+}
+
+.orderBy button {
+  /* border: 2px solid currentColor; */
+  /* border-radius: 3rem; */
+  color: black;
+  font-size: 15px;
+  font-weight: 100;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+}
+
+.orderBy button::after {
+  background-color: black;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.5s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+.orderBy button:hover::after {
+  transform: translate(0,0);
+}
+
+.orderBy button:hover{
+  border: 2px solid transparent;
+  color: white;
+  transform: scale(1.02);
+  will-change: transform;
 }
 
 .sidebar .closeSideBarButton {
   position: absolute;
   top: 15px;
   right: 25px;
-  font-size: 36px;
+  font-size: 25px;
   margin-left: 50px;
-  color: #818181;
+  color: black;
   cursor: pointer;
 }
 .categories {
@@ -49,40 +88,28 @@
   margin-top: 10px;
 }
 
-.sidebar input[type="checkbox"]{
-
-    accent-color: #313131;
-    border: 1px solid red;
+.sidebar input[type="checkbox"] {
+  accent-color: #313131;
+  border: 1px solid red;
 }
 
-
 @media screen and (min-width: 300px) {
-
-  .sidebar{
-
-    width: 300px ;
+  .sidebar {
+    width: 300px;
     border-right: 1px solid lightgrey;
   }
 
-
- 
-   .sidebar > .hide-hamburguer {
-     visibility: hidden;
-    }
-
-  
+  .sidebar > .hide-hamburguer {
+    visibility: hidden;
+  }
 }
 
-
 @media screen and (min-width: 800px) {
-
-  .sidebar{
-
+  .sidebar {
     width: 280px !important;
     border-right: 1px solid lightgrey;
   }
-  .title{
-
+  .title {
     display: block;
     font-size: 20px;
     margin-top: -30px;
@@ -91,18 +118,12 @@
 
   .sidebar .closeSideBarButton {
     display: none;
-   }
- 
-   .sidebar > .hide-hamburguer {
-     visibility: hidden;
-    }
-   .mobile-title{
-     display: none;
-   }
+  }
 
-
-  
+  .sidebar > .hide-hamburguer {
+    visibility: hidden;
+  }
+  .mobile-title {
+    display: none;
+  }
 }
-
-
-

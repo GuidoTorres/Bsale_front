@@ -10,12 +10,10 @@ export const priceRange = async (e) => {
     }else if(e.target.id === "max"){
         max = e.target.value
     }
-    console.log(min);
-    console.log(max);
 
-    if(min !==undefined && max !== undefined ){
+    if(!isNaN(min) && !isNaN(max) ){
 
-        const response = await fetch(`https://bsale2.herokuapp.com/api/v1/products?prices=${min},${max}`)
+        const response = await fetch(`http://localhost:3000/api/v1/products?prices=${min},${max}`)
         
         const data = await response.json();
         if (data?.content.length > 0) {

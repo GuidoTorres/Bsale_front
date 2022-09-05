@@ -15,7 +15,6 @@ export const renderCategories = (data) => {
     categories.appendChild(div);
   });
 
-  //accedo a los checboxes para poder utilizar el eventlistener
   const cbox = document.querySelectorAll("#cbox");
 
   for (let i = 0; i < cbox.length; i++) {
@@ -36,11 +35,14 @@ const searchBy = async (e) => {
   }
 
 
-  const response = await fetch(`https://bsale2.herokuapp.com/api/v1/products/${array}`)
+  const response = await fetch(`http://localhost:3000/api/v1/products/${array}`)
+  const term = document
+  .querySelector(".input-search")
 
   const data = await response.json();
    if (data?.content.length > 0) {
           let products = document.getElementsByClassName("products")[0];
+          term.value = ""
           products.innerHTML = "";
           renderProducts(data);
         }
