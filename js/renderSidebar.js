@@ -6,16 +6,16 @@ const products = document.querySelector(".closeSideBarButton");
 
 
 export const isOpened = () => {
-    if(window.matchMedia("(min-width: 800px)").matches){
+    if(window.matchMedia("(min-width: 400px)").matches){
 
-        sidebar.style.width = "40%"
+        sidebar.style.width = "300px"
+
+    }else if(window.matchMedia("(min-width: 300px)").matches){
+
+ sidebar.style.width = "100%"
 
     }
-    // else if(window.matchMedia("(min-width: 300px)").matches){
 
-        sidebar.style.width = "100%"
-
-    // }
 
 }
 

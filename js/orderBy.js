@@ -1,3 +1,0 @@
-// import { renderProducts } from "./renderProducts";
-
-

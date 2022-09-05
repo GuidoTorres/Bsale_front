@@ -4,7 +4,8 @@ import { searchProducts } from "./js/searchProducts.js";
 import {renderInputSearch} from "./js/renderInputSearch.js"
 import {isOpened} from "./js/renderSidebar.js"
 import {getVals} from "./js/range-slider.js"
-import {pagination} from "./js/pagination.js"
+// import {pagination} from "./js/pagination.js"
+import {priceRange} from "./js/priceRange.js"
 
 const sidebar = document.querySelector(".sidebar");
 

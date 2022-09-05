@@ -32,27 +32,26 @@ export const renderProducts = (data) => {
   });
 };
 
-// filtros de busqueda
-const price_asc = document.querySelector(".asc");
-const price_desc = document.querySelector(".desc");
-const discount = document.querySelector(".disc");
+// ordenar de forma ascendente, descendente y descuento
+// const price_asc = document.querySelector(".asc");
+// const price_desc = document.querySelector(".desc");
+// const discount = document.querySelector(".disc");
 
-export const orderBy = async (e) => {
+// export const orderBy = async (e) => {
 
-  let products = document.getElementsByClassName("products")[0];
-  const response = await fetch(
-    `https://bsale2.herokuapp.com/api/v1/products?sortBy=${e.target.value}`
-  );
-  const data = await response.json();
+//   let products = document.getElementsByClassName("products")[0];
+//   const response = await fetch(
+//     `https://bsale2.herokuapp.com/api/v1/products?sortBy=${e.target.value}`
+//   );
+//   const data = await response.json();
 
-  console.log(data);
 
-  if (data?.content.length > 0) {
-    products.innerHTML = "";
-    renderProducts(data);
-  }
-};
+//   if (data?.content.length > 0) {
+//     products.innerHTML = "";
+//     renderProducts(data);
+//   }
+// };
 
-price_asc.addEventListener("click", orderBy,false);
-price_desc.addEventListener("click", orderBy,false);
-discount.addEventListener("click", orderBy,false);
+// price_asc.addEventListener("click", orderBy,false);
+// price_desc.addEventListener("click", orderBy,false);
+// discount.addEventListener("click", orderBy,false);
