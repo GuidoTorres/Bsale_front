@@ -35,7 +35,7 @@ const searchBy = async (e) => {
   }
 
 
-  const response = await fetch(`http://localhost:3000/api/v1/products/${array}`)
+  const response = await fetch(`https://bsale2.herokuapp.com/api/v1/products/${array}`)
   const term = document
   .querySelector(".input-search")
 

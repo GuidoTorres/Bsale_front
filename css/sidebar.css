@@ -90,7 +90,11 @@
 
 .sidebar input[type="checkbox"] {
   accent-color: #313131;
-  border: 1px solid red;
+}
+
+.accordion{
+
+  background-color: red !important;
 }
 
 @media screen and (min-width: 300px) {

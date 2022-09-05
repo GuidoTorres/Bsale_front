@@ -17,7 +17,7 @@ export const searchProducts = async (e) => {
   //busqueda de productos y ordenar por
   if (term !== undefined && sortBy !== undefined) {
       const response = await fetch(
-        `http://localhost:3000/api/v1/products/search?term=${term}&sortBy=${sortBy}`
+        `https://bsale2.herokuapp.com/api/v1/products/search?term=${term}&sortBy=${sortBy}`
       );
       const data = await response.json();
       if (data?.content.length > 0) {
@@ -30,7 +30,7 @@ export const searchProducts = async (e) => {
   if(term !== undefined){
     if (e.code === "Enter") {
       const response = await fetch(
-        `http://localhost:3000/api/v1/products/search?term=${term}`
+        `https://bsale2.herokuapp.com/api/v1/products/search?term=${term}`
       );
       const data = await response.json();
       if (data?.content.length > 0) {
