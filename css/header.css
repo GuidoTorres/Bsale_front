@@ -1,0 +1,51 @@
+.mobile-header{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.mobile-header h1{
+
+    font-size: 20px;
+}
+
+.search-container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container input {
+
+    width: 80%;
+    display: none;
+    margin-top: 20px;
+    
+}
+
+@media screen and (min-width: 800px) {
+    .mobile-header .hide-hamburguer{
+
+        display: none;
+    }
+    .mobile-header .icon-search{
+
+        display: none;
+    }
+    .search-container input {
+
+        width: 20%;
+        display: block;
+        margin-left: 65%;
+        height: 30px;
+        border-radius: 8px;
+        border: 1px solid lightgrey;
+        padding: 8px;
+        outline: none;
+        
+    }
+}
+

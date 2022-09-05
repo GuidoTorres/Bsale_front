@@ -1,0 +1,156 @@
+.skeleton {
+  /* opacity: .6; */
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.product-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product {
+  width: 80%;
+  height: 300px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  object-fit: contain;
+  box-shadow: -15px -25px 29px rgba(255, 255, 255, 0.1),
+  0px 5px 9px rgba(94, 104, 121, 0.1);
+}
+
+
+
+.product:nth-child(1) {
+  margin-top: 10px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.image {
+  height: 90%;
+  margin-top: 20px;
+  border-radius: 10px;
+
+
+}
+
+.image:hover {
+
+  opacity: .7;
+  cursor: pointer;
+}
+
+.category {
+  margin-top: 25px;
+  color: #c7c7c7;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.name {
+  color: #626262;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.discount {
+  color: #fff;
+  font-weight: 500;
+  background-color: #f3595a;
+  position: absolute;
+  top: 180px;
+  
+  border-radius: 3px;
+  width: 40px;
+  text-align: center;
+  z-index: 1;
+  
+}
+
+.price-container {
+  margin-top: 8px;
+  color: #626262;
+}
+
+.price {
+  color: #ff7a7a;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 500px) {
+  .product-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .product {
+    width: 40%;
+  }
+
+  .product:nth-child(1) {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .product-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+
+  .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 300px;
+    transition: margin-left 0.5s;
+  }
+
+  .product {
+    width: 45%;
+  }
+
+  .product:nth-child(1) {
+    margin-top: 70px;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+
+
+  .product {
+    width: 30%;
+  }
+
+
+}
+
