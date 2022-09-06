@@ -16,7 +16,7 @@
 }
 
 .search-container input {
-  width: 80%;
+  width: 85%;
   display: none;
   height: 30px;
   border-radius: 8px;
@@ -24,6 +24,7 @@
   padding: 8px;
   outline: none;
   margin-top: 20px;
+
 }
 .product-category {
   display: flex;
@@ -54,17 +55,18 @@ cursor: pointer;
   }
   .search-container {
     justify-content: flex-end;
-    width: 95%;
+    width: 100%;
   }
   .search-container input {
     width: 200px;
     display: block;
-    margin-left: 65%;
     height: 30px;
     border-radius: 8px;
     border: 1px solid lightgrey;
     padding: 8px;
     outline: none;
+    margin-right: 40px;
+    
   }
 
   .product-category {

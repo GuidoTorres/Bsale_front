@@ -29,32 +29,10 @@
 }
 
 .orderBy button {
-  /* border: 2px solid currentColor; */
-  /* border-radius: 3rem; */
   color: black;
   font-size: 15px;
   font-weight: 100;
-  overflow: hidden;
-  position: relative;
-  transition: 0.2s transform ease-in-out;
-  will-change: transform;
-  z-index: 0;
-}
 
-.orderBy button::after {
-  background-color: black;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(-100%, 0) rotate(10deg);
-  transform-origin: top left;
-  transition: 0.5s transform ease-out;
-  will-change: transform;
-  z-index: -1;
 }
 
 .orderBy button:hover::after {
@@ -62,10 +40,9 @@
 }
 
 .orderBy button:hover{
-  border: 2px solid transparent;
-  color: white;
-  transform: scale(1.02);
-  will-change: transform;
+  transform: scale(1.01);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .sidebar .closeSideBarButton {
@@ -92,10 +69,6 @@
   accent-color: #313131;
 }
 
-.accordion{
-
-  background-color: red !important;
-}
 
 @media screen and (min-width: 300px) {
   .sidebar {
