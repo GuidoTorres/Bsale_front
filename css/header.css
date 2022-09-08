@@ -20,11 +20,17 @@
   display: none;
   height: 30px;
   border-radius: 8px;
-  border: 1px solid lightgrey;
+  border: 1px solid #626568;
   padding: 8px;
   outline: none;
   margin-top: 20px;
 
+}
+.search-container input::placeholder {
+
+  color: #212429;
+  font-size: 14px;
+  
 }
 .product-category {
   display: flex;
@@ -39,11 +45,13 @@
 }
 
 .icon-search:hover{
-    cursor: pointer;
+    transform: scale(1.15);
+    transition: 0.5;
 }
 
 .hide-hamburguer:hover{
-cursor: pointer;
+  transform: scale(1.15);
+  transition: 0.5;
 }
 
 @media screen and (min-width: 800px) {
@@ -62,12 +70,13 @@ cursor: pointer;
     display: block;
     height: 30px;
     border-radius: 8px;
-    border: 1px solid lightgrey;
+    border: 1px solid black;
     padding: 8px;
     outline: none;
     margin-right: 40px;
     
   }
+
 
   .product-category {
     justify-content: flex-start;

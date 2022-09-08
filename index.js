@@ -1,16 +1,17 @@
-import { fetchCategories } from "./js/fetchCategories.js";
-import { fetchProducts } from "./js/fetchProducts.js";
-import { searchProducts } from "./js/searchProducts.js";
-import {renderInputSearch} from "./js/renderInputSearch.js"
-import {isOpened} from "./js/renderSidebar.js"
+import { fetchCategories } from "./js/fetchData/fetchCategories.js";
+import { fetchProducts } from "./js/fetchData/fetchProducts.js";
+import { searchProducts, searchProductsAndSort, searchProductsAndPriceRange } from "./js/searchProducts.js";
+import {renderInputSearch} from "./js/renderData/renderInputSearch.js"
+import {isOpened} from "./js/renderData/renderSidebar.js"
 import {getVals} from "./js/range-slider.js"
-// import {pagination} from "./js/pagination.js"
 import {priceRange} from "./js/priceRange.js"
+import { orderBy } from "./js/orderBy.js";
 
 const sidebar = document.querySelector(".sidebar");
 
 fetchCategories()
 fetchProducts()
+
 
 //asignar los valores del slider a los inputs
 var minSlider = document.getElementById('min');

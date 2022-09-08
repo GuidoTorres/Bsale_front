@@ -1,4 +1,40 @@
-nav[aria-label="Page navigation example"]{
+.pagination {
+  height: 40px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
 
-    border: 1px solid red !important;
+.pagination a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  border: 1px solid lightgrey;
+  width: 30px;
+  text-align: center;
+}
+.pagination a:hover {
+  background-color: black;
+  color: white;
+}
+.pagination .previous {
+  width: 80px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.pagination .next {
+  width: 80px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.selected{
+  
+  background-color: black;
+  color: white;
+  border: 1px solid red;
 }

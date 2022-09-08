@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/products.css" />
     <link rel="stylesheet" href="./css/multiSlider.css" />
+    <link rel="stylesheet" href="./css/pagination.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -96,9 +98,9 @@
               >
                 <div class="accordion-body">
                   <div class="orderBy">
-                    <button class="asc" value="price_asc">Precio (Menor a mayor)</button>
-                    <button class="desc" value="price_desc">Precio (Mayor a menor)</button>
-                    <button class="disc" value="disc_desc">Descuento (Mayor a menor)</button>
+                    <button id="order" class="asc" value="price_asc">Precio (Menor a mayor)</button>
+                    <button id="order"class="desc" value="price_desc">Precio (Mayor a menor)</button>
+                    <button id="order" class="disc" value="disc_desc">Descuento (Mayor a menor)</button>
                   </div>
                 </div>
               </div>
@@ -151,30 +153,12 @@
 
 
       </section>
-              <!-- pagination -->
-              <!-- <nav aria-label="Page navigation example" class="page_navigation">
-                <ul class="pagination">
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                      <span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <div id="pagination-numbers" class="d-flex ">
-       
-                  </div>
-                  <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                      <span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav> -->
+            
+      <div class="pagination">
+
+      </div>
     </div>
     <!-- Main -->
-
-
-
-   
      
     </body>
     <script type="module" src="./index.js"></script>

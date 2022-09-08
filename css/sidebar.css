@@ -32,14 +32,13 @@
   color: black;
   font-size: 15px;
   font-weight: 100;
-
 }
 
 .orderBy button:hover::after {
-  transform: translate(0,0);
+  transform: translate(0, 0);
 }
 
-.orderBy button:hover{
+.orderBy button:hover {
   transform: scale(1.01);
   cursor: pointer;
   transition: 0.3s;
@@ -69,10 +68,12 @@
   accent-color: #313131;
 }
 
+.orderSelected {
+  border: 1px solid black;
+}
 
 @media screen and (min-width: 300px) {
   .sidebar {
-    width: 300px;
     border-right: 1px solid lightgrey;
   }
 
