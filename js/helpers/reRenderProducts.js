@@ -1,5 +1,5 @@
-import { pagination } from "./pagination.js";
-import { renderProducts } from "./renderProducts.js";
+import { pagination } from "../renderData/pagination.js";
+import { renderProducts } from "../renderData/renderProducts.js";
 
 export const reRender = async (data,term) => {
   if (data?.content.length > 0) {

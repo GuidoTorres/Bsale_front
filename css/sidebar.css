@@ -72,6 +72,13 @@
   border: 1px solid black;
 }
 
+.accordion-button{
+
+  padding-right: 50% !important;
+}
+
+
+
 @media screen and (min-width: 300px) {
   .sidebar {
     border-right: 1px solid lightgrey;

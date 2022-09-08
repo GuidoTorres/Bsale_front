@@ -1,7 +1,7 @@
 import { renderProducts } from "./renderData/renderProducts.js";
 import { pagination } from "./renderData/pagination.js";
 import { base } from "./base.js";
-import { reRender } from "./renderData/reRenderProducts.js";
+import { reRender } from "./helpers/reRenderProducts.js";
 
 const price_asc = document.querySelector(".asc");
 const price_desc = document.querySelector(".desc");

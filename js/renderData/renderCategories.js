@@ -1,6 +1,8 @@
 import { renderProducts } from "./renderProducts.js";
 import { pagination } from "./pagination.js";
 import { base } from "../base.js";
+import { reRender } from "../helpers/reRenderProducts.js";
+import { orderBy } from "../orderBy.js";
 
 const term = document.querySelector(".input-search");
 
@@ -44,12 +46,7 @@ const searchByCategory = async (e) => {
   const response = await fetch(`${base}/products/${array}`);
   const data = await response.json();
   if (data?.content.length > 0) {
-    let products = document.getElementsByClassName("products")[0];
-    let pag = document.querySelector(".pagination");
-    term.value = "";
-    pag.innerHTML = "";
-    products.innerHTML = "";
-    renderProducts(data);
-    pagination(data, array);
+    reRender(data, array);
+    orderBy(array);
   }
 };

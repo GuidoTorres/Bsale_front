@@ -19,6 +19,7 @@ export const pagination = (data, term) => {
 //cambiar el background-color a la pagina seleccionada de la paginacion
 const selectedPage = (selected, term) => {
   for (let i = 0; i < selected.length; i++) {
+    selected[0].classList.add("selected");
     selected[i].addEventListener("click", () => {
       Array.from(selected).map((item, j) => {
         item.classList.remove("selected");

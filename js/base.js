@@ -1,1 +1,1 @@
-export const base = "http://localhost:3000/api/v1"
+export const base = "https://bsale2.herokuapp.com/api/v1"
