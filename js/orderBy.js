@@ -7,6 +7,11 @@ let maxSlider = document.getElementById("max");
 let array;
 let sort;
 export const orderBy = async (e) => {
+
+  // if(e.target.value)
+  // e.target.classList.add("selected")
+  // let prueba = e.target
+  // console.log(e.target.value);
   let term = document.querySelector(".input-search").value;
   if (Array.isArray(e)) {
     array = e;

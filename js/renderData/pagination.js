@@ -32,7 +32,6 @@ const selectedPage = (selected, term) => {
 
 const fetchByPagination = async (page, term) => {
   let pageNumber = page.getAttribute("value");
-  console.log("fetch by pagination");
 
   const pag =
     term === undefined

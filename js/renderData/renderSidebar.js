@@ -5,7 +5,7 @@ const products = document.querySelector(".closeSideBarButton");
 
 export const isOpened = (e) => {
   if (window.matchMedia("(min-width: 400px)").matches) {
-    sidebar.style.width = "300px";
+    sidebar.style.width = "250px";
   } else if (window.matchMedia("(max-width: 400px)").matches) {
     sidebar.style.width = "100%";
   }

@@ -3,6 +3,7 @@ import { pagination } from "./pagination.js";
 import { base } from "../base.js";
 import { reRender } from "../helpers/reRenderProducts.js";
 import { orderBy } from "../orderBy.js";
+import { addBadge } from "./addBadge.js";
 
 const term = document.querySelector(".input-search");
 
@@ -14,7 +15,7 @@ export const renderCategories = (data) => {
   data?.map((item, i) => {
     div.innerHTML += `
       <label class="catLabel">
-      <input type="checkbox" id="cbox" value=${item.id}>
+      <input type="checkbox" id="cbox" value=${item.id} class=${item.name.split(" ").join()}>
       ${item.name}
       </label>     
       `;
@@ -22,10 +23,9 @@ export const renderCategories = (data) => {
   });
 
   const cbox = document.querySelectorAll("#cbox");
-
-  for (let i = 0; i < cbox.length; i++) {
-    cbox[i].addEventListener("click", searchByCategory);
-  }
+  Array.from(cbox).map((item) => {
+    item.addEventListener("click", searchByCategory);
+  });
 };
 
 let array = [];
@@ -46,6 +46,7 @@ const searchByCategory = async (e) => {
   const response = await fetch(`${base}/products/${array}`);
   const data = await response.json();
   if (data?.content.length > 0) {
+    addBadge(e);
     reRender(data, array);
     orderBy(array);
   }

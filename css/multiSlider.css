@@ -1,13 +1,13 @@
-.multi-slider{
-
+.multi-slider {
   width: 60%;
   padding-left: 10px;
 }
 .priceSlider {
-  width: 50%;
+  width: 60%;
   background-color: #fff;
   padding-left: 10px;
   padding-bottom: 10px;
+  height: 70px;
 }
 
 .min {
