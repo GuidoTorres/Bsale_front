@@ -3,15 +3,21 @@ import { renderProducts } from "./renderData/renderProducts.js";
 
 let minSlider = document.getElementById("min");
 let maxSlider = document.getElementById("max");
+const price_asc = document.querySelector(".asc");
+const price_desc = document.querySelector(".desc");
+const discount = document.querySelector(".disc");
 
 let array;
 let sort;
 export const orderBy = async (e) => {
+  price_asc.classList.remove("selected");
+  price_desc.classList.remove("selected");
+  discount.classList.remove("selected");
 
-  // if(e.target.value)
-  // e.target.classList.add("selected")
-  // let prueba = e.target
-  // console.log(e.target.value);
+  console.log(e.target);
+  // add active to clicked element
+  e.target.classList.add("selected");
+
   let term = document.querySelector(".input-search").value;
   if (Array.isArray(e)) {
     array = e;
@@ -46,14 +52,8 @@ const searchByAndOrderBy = async (array, sort) => {
   }
 };
 
-const searByAndOrderAndPrice = () => {
-
-
-}
+const searByAndOrderAndPrice = () => {};
 //ordenar de forma ascendente, descendente y descuento
-const price_asc = document.querySelector(".asc");
-const price_desc = document.querySelector(".desc");
-const discount = document.querySelector(".disc");
 
 [price_asc, price_desc, discount].map((item) => {
   item.addEventListener("click", orderBy, false);
