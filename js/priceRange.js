@@ -16,7 +16,6 @@ export const priceRange = async (e) => {
   if (!term && min || max) {
     min = min || 0
     max = max || 20000
-    console.log("price range");
     const response = await fetch(`${base}/products?prices=${min},${max}`);
 
     const data = await response.json();

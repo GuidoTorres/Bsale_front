@@ -14,8 +14,6 @@ export const orderBy = async (e) => {
   price_desc.classList.remove("selected");
   discount.classList.remove("selected");
 
-  console.log(e.target);
-  // add active to clicked element
   e.target.classList.add("selected");
 
   let term = document.querySelector(".input-search").value;

@@ -41,7 +41,6 @@ export const addBadge = (e) => {
   let badge = document.querySelectorAll(".badge");
   Array.from(badge).map((item) => {
     item.addEventListener("click", () => {
-      console.log(removeRepeatedValue);
       item.remove();
       e.target.checked = false;
     });
